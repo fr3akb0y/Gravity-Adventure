@@ -135,7 +135,7 @@ public class LevelEditor : MonoBehaviour {
     {
         if (SaveLevelNameText.text != null)
         {
-            string path = "Assets/Resources/Levels/" + SaveLevelNameText.text + ".txt";
+            string path = Application.dataPath + "/Resources/Levels/" + SaveLevelNameText.text + ".txt";
             string[] tileData = new string[TileHolder.transform.childCount];
             int childLength = TileHolder.transform.childCount;
 
@@ -161,7 +161,7 @@ public class LevelEditor : MonoBehaviour {
 
     public void LoadLevel()
     {
-        if (LoadLevelNameText.text != null && File.Exists("Assets/Resources/Levels/" + LoadLevelNameText.text + ".txt"))
+        if (LoadLevelNameText.text != null && File.Exists(Application.dataPath + "/Resources/Levels/" + LoadLevelNameText.text + ".txt"))
         {
             LevelGenerator.DeleteLevel();
             LevelGenerator.GenerateLevel(LoadLevelNameText.text);

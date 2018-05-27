@@ -9,7 +9,7 @@ public class LevelChanger : MonoBehaviour {
 
     private void Start()
     {
-        sceneDataStorage = GameObject.FindWithTag("LevelNameDeliver").GetComponent<SceneDataStorage>();
+        sceneDataStorage = GameObject.FindWithTag("SceneDataStorage").GetComponent<SceneDataStorage>();
     }
 
     public static void LoadMenu()

@@ -16,7 +16,7 @@ public class LevelGenerator : MonoBehaviour {
     
     public void GenerateLevel(string targetLevelName)
     {
-        string path = "Assets/Resources/Levels/" + targetLevelName + ".txt";
+        string path = Application.dataPath + "/Resources/Levels/" + targetLevelName + ".txt";
 
         if (File.Exists(path))
         {

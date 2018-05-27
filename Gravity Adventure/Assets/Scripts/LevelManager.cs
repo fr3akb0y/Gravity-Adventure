@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour {
     private SceneDataStorage sceneDataStorage;
 
 	void Start () {
-        sceneDataStorage = GameObject.FindWithTag("LevelNameDeliver").GetComponent<SceneDataStorage>();
+        sceneDataStorage = GameObject.FindWithTag("SceneDataStorage").GetComponent<SceneDataStorage>();
         string levelName = sceneDataStorage.GetLevelName(true);
 
         if(levelName != "")

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BouncePad : MonoBehaviour {
 
+    public AudioSource BounceAudioSource;
+
     private float force = 5f;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -12,6 +14,7 @@ public class BouncePad : MonoBehaviour {
         {
             Rigidbody2D rb = collision.transform.gameObject.GetComponent<Rigidbody2D>();
             rb.AddForce(transform.up * force, ForceMode2D.Impulse);
+            BounceAudioSource.Play();
         }
     }
 }

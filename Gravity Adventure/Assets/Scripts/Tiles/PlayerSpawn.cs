@@ -11,7 +11,7 @@ public class PlayerSpawn : MonoBehaviour {
     private SceneDataStorage sceneDataStorage;
 
     void Start () {
-        sceneDataStorage = GameObject.FindWithTag("LevelNameDeliver").GetComponent<SceneDataStorage>();
+        sceneDataStorage = GameObject.FindWithTag("SceneDataStorage").GetComponent<SceneDataStorage>();
 
         GameObject newBall = Instantiate(PlayerSpherePrefab, transform.position, Quaternion.identity);
         GameObject newCam = Instantiate(PlayerCam, transform.position, Quaternion.identity);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class TileGravityChanger : MonoBehaviour {
 
     public GravityChanger GravityChanger;
+    public AudioSource GravityChangingAudioSource;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +21,12 @@ public class TileGravityChanger : MonoBehaviour {
                 case 270: GravityChanger.ChangeGravityToRight(); break;
                 default: break;
             }
+            PlayGravitySound();
         }
+    }
+
+    private void PlayGravitySound()
+    {
+        GravityChangingAudioSource.Play();
     }
 }

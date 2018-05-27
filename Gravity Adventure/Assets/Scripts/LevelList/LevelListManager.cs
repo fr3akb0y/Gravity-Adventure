@@ -16,7 +16,7 @@ public class LevelListManager : MonoBehaviour {
 
     public void GenerateLevelButtons()
     {
-        string path = "Assets/Resources/Levels/";
+        string path = Application.dataPath + "/Resources/Levels/";
         DirectoryInfo info = new DirectoryInfo(path);
         FileInfo[] fileInfo = info.GetFiles("*.txt");
         
